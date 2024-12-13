@@ -1,17 +1,13 @@
 import { create } from 'zustand';
 
-import { State, Theme } from '../types';
+import { State, Theme, User } from '../types';
 
 export default create<State>((set) => ({
   config: {
     theme: Theme.dark
   },
-  users: {
-    '630481d6-878b-4a58-b7fa-52861c547cff': {
-      id: '630481d6-878b-4a58-b7fa-52861c547cff',
-      name: 'Luuk'
-    }
-  },
+  users: { ...demoUsers() },
+  loaders: {},
   update: (payload) => set(() => ({ ...payload })),
   merge: (collection, payload) =>
     set((state) => ({
@@ -27,3 +23,12 @@ export default create<State>((set) => ({
       }
     }))
 }));
+
+function demoUsers(): Record<string, User> {
+  return {
+    '630481d6-878b-4a58-b7fa-52861c547cff': {
+      id: '630481d6-878b-4a58-b7fa-52861c547cff',
+      name: 'Luuk'
+    }
+  };
+}

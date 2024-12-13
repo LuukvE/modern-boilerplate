@@ -7,8 +7,8 @@ export interface Entity {
 }
 
 export enum Theme {
-  dark = "dark",
-  light = "light",
+  dark = 'dark',
+  light = 'light'
 }
 
 export type Memory = {
@@ -16,6 +16,7 @@ export type Memory = {
   config: {
     theme: Theme;
   };
+  loaders: Record<string, boolean>;
 };
 
 export interface User extends Entity {
@@ -26,9 +27,5 @@ export interface User extends Entity {
 export type State = Memory & {
   update: (payload: Partial<State>) => void;
   merge: <P>(collection: keyof Memory, payload: P) => void;
-  add: <P>(
-    collection: keyof Memory,
-    id: string,
-    payload: P,
-  ) => void;
+  add: <P>(collection: keyof Memory, id: string, payload: P) => void;
 };
