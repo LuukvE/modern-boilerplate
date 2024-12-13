@@ -1,12 +1,11 @@
-import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
-import { twMerge } from 'tailwind-merge';
+import { Route, Routes } from 'react-router-dom';
 
 import NavButton from './NavButton';
 import Settings from './Settings';
 import Users from './Users';
 import logo from '/logo.svg';
 
-function App() {
+export default function App() {
   return (
     <>
       <div className="mx-auto flex items-center justify-center">
@@ -24,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App;

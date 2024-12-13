@@ -4,7 +4,7 @@ import useStore from '../hooks/useStore';
 import { User } from '../types';
 import Button from './Button';
 
-function Users() {
+export default function Users() {
   const { users, add } = useStore((state) => state);
   const list = useMemo(() => Object.values(users), [users]);
 
@@ -37,5 +37,3 @@ function Users() {
     </div>
   );
 }
-
-export default Users;

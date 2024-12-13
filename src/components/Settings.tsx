@@ -4,7 +4,7 @@ import useStore from '../hooks/useStore';
 import { Theme } from '../types';
 import Button from './Button';
 
-function Settings() {
+export default function Settings() {
   const { config, update } = useStore((state) => state);
 
   const toggleTheme = useCallback(() => {
@@ -32,5 +32,3 @@ function Settings() {
     </div>
   );
 }
-
-export default Settings;

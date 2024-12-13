@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-function Button({ className, ...props }: DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>) {
+export default function Button({ className, ...props }: DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>) {
   return (
     <button
       className={twMerge(
@@ -12,5 +12,3 @@ function Button({ className, ...props }: DetailedHTMLProps<ButtonHTMLAttributes<
     />
   );
 }
-
-export default Button;

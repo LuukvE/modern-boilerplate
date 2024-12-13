@@ -2,7 +2,7 @@ import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
 import { NavLink, NavLinkProps } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
 
-function NavButton({
+export default function NavButton({
   className,
   ...props
 }: Omit<NavLinkProps, 'className'> & DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) {
@@ -19,5 +19,3 @@ function NavButton({
     />
   );
 }
-
-export default NavButton;
