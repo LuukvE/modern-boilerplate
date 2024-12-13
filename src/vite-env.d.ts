@@ -2,7 +2,7 @@
 /// <reference types="vite-plugin-svgr/client" />
 
 declare module '@icon/font-awesome/icons/*.svg' {
-  import * as React from 'react';
-  const FontAwesomeIcon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
-  export default FontAwesomeIcon;
+  import { FunctionComponent, SVGProps } from 'react';
+  const Icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+  export default Icon;
 }
