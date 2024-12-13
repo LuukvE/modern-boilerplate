@@ -26,6 +26,6 @@ export interface User extends Entity {
 
 export type State = Memory & {
   update: (payload: Partial<State>) => void;
-  merge: <P>(collection: keyof Memory, payload: P) => void;
-  add: <P>(collection: keyof Memory, id: string, payload: P) => void;
+  merge: <C extends keyof Memory>(collection: C, payload: Memory[C]) => void;
+  add: <C extends keyof Memory>(collection: C, id: string, payload: Memory[C][keyof Memory[C]]) => void;
 };

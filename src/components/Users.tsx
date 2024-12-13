@@ -1,7 +1,6 @@
 import { useCallback, useMemo } from 'react';
 
 import useStore from '../hooks/useStore';
-import { User } from '../types';
 import Button from './Button';
 
 export default function Users() {
@@ -11,7 +10,7 @@ export default function Users() {
   const addUser = useCallback(() => {
     const id = crypto.randomUUID();
 
-    add<User>('users', id, { id, name: 'Dummy User' });
+    add('users', id, { id, name: 'Dummy User' });
   }, [add]);
 
   return (
