@@ -9,7 +9,7 @@
 - Tailwind _(install VSCode extention)_
 - Vite
 - Zustand
-- FontAwesome
+- Font Awesome
 
 ## Installation
 

@@ -19,7 +19,7 @@ export default function Users() {
       <div className="flex items-center">
         <h1 className="grow text-2xl font-bold">Users</h1>
         <Button onClick={addUser} className="flex items-center">
-          <PlusIcon className="mr-2 w-4 fill-white" /> Create User
+          <PlusIcon className="mr-2 w-4 fill-[#222] dark:fill-white" /> Create User
         </Button>
       </div>
       {!!list.length && (
