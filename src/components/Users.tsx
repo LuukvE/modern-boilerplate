@@ -1,7 +1,8 @@
+import PlusIcon from '@fortawesome/fontawesome-free/svgs/solid/plus.svg';
 import { useCallback, useMemo } from 'react';
 
-import useStore from '../hooks/useStore';
-import Button from './Button';
+import Button from '@/components/Button';
+import useStore from '@/hooks/useStore';
 
 export default function Users() {
   const { users, add } = useStore((state) => state);
@@ -17,7 +18,9 @@ export default function Users() {
     <div className="mx-auto flex w-full max-w-[800px] flex-col p-8">
       <div className="flex items-center">
         <h1 className="grow text-2xl font-bold">Users</h1>
-        <Button onClick={addUser}>Create User</Button>
+        <Button onClick={addUser} className="flex items-center">
+          <PlusIcon className="mr-2 w-4 fill-white" /> Create User
+        </Button>
       </div>
       {!!list.length && (
         <div className="mt-4 flex w-full flex-col leading-loose">

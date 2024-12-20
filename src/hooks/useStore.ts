@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-import { State, Theme, User } from '../types';
+import { State, Theme, User } from '@/types';
 
 export default create<State>((set) => ({
   config: {

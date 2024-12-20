@@ -13,7 +13,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "@*": ["./src*"]
+    }
   },
   "include": ["src"]
 }

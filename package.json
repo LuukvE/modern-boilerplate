@@ -1,5 +1,5 @@
 {
-  "name": "modern-boilerplate",
+  "name": "react-boilerplate",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -9,12 +9,12 @@
     "checkdeps": "npx npm-check --skip-unused"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.2",
     "tailwind-merge": "^2.5.5",
-    "zustand": "^5.0.2",
-    "@icon/font-awesome": "^4.7.0-2"
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.0",
@@ -24,6 +24,7 @@
     "@typescript-eslint/parser": "^8.18.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
+    "esbuild": "^0.24.0",
     "eslint": "^9.13.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
@@ -50,8 +51,9 @@
     "importOrderSeparation": true,
     "importOrderSortSpecifiers": true,
     "importOrder": [
-      "^(?!@/|/|\\.)(.*)$",
-      "^[./]"
+      "^(?!@/|\\.)(.*)$",
+      "^@/",
+      "^\\."
     ]
   },
   "eslintConfig": {

@@ -1,8 +1,8 @@
 import { useCallback } from 'react';
 
-import useStore from '../hooks/useStore';
-import { Theme } from '../types';
-import Button from './Button';
+import Button from '@/components/Button';
+import useStore from '@/hooks/useStore';
+import { Theme } from '@/types';
 
 export default function Settings() {
   const { config, update } = useStore((state) => state);

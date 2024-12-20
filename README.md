@@ -1,4 +1,4 @@
-# Modern Boilerplate
+# React Boilerplate
 
 ## Major Tech
 

@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 
-import { Entity } from '../types';
-import useStore from './useStore';
+import useStore from '@/hooks/useStore';
+import { Entity } from '@/types';
 
 export default () => {
   const merge = useStore((state) => state.merge);
