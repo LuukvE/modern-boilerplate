@@ -8,7 +8,7 @@ export default create<State>((set) => ({
   },
   users: { ...demoUsers() },
   loaders: {},
-  update: (payload) => set(() => ({ ...payload })),
+  update: (payload) => set((state) => ({ ...state, ...payload })),
   merge: (collection, payload) =>
     set((state) => ({
       ...state,

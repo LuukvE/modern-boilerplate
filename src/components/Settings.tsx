@@ -5,7 +5,7 @@ import useStore from '@/hooks/useStore';
 import { Theme } from '@/types';
 
 export default function Settings() {
-  const { config, update } = useStore((state) => state);
+  const { config, update } = useStore();
 
   const toggleTheme = useCallback(() => {
     const opposite: Record<string, string> = {

@@ -5,7 +5,7 @@ import Button from '@/components/Button';
 import useStore from '@/hooks/useStore';
 
 export default function Users() {
-  const { users, add } = useStore((state) => state);
+  const { users, add } = useStore();
   const list = useMemo(() => Object.values(users), [users]);
 
   const addUser = useCallback(() => {
